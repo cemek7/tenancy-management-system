@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+class AuthService {
+  static async login(username, password) {
+    // Implement login logic with backend API call
+  }
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  static async register(username, email, password) {
+    // Implement registration logic with backend API call
+  }
+
+  static async logout() {
+    // Implement logout logic
+  }
+
+  static isAuthenticated() {
+    // Check if user is authenticated (e.g., by checking authentication token)
+  }
 }
 
-export default App;
+export default AuthService;
