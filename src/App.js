@@ -12,10 +12,10 @@ function App() {
     <Router>
       <Header />
       <Routes>
-        <Route exact path="/" component={LoginPage} />
-        <Route exact path="/register" component={RegisterPage} />
-        <Route exact path="/dashboard" component={DashboardPage} />
-        <Route exact path="/property/:id" component={PropertyPage} />
+        <Route path="/" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/dashboard" element={<DashboardPage />} />
+        <Route path="/property/:id" element={<PropertyPage />} />
       </Routes>
       <Footer />
     </Router>
