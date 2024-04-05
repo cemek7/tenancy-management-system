@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import PropertyList from '../components/PropertyList';
 
-function App() {
+function DashboardPage() {
+  // Fetch user's properties from backend or mock data
+  const properties = [
+    { id: 1, name: 'Property 1' },
+    { id: 2, name: 'Property 2' },
+    { id: 3, name: 'Property 3' },
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h2>Dashboard</h2>
+      <PropertyList properties={properties} />
     </div>
   );
 }
 
-export default App;
+export default DashboardPage;
