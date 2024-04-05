@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { useParams } from 'react-router-dom';
+import TenantDetails from '../components/TenantDetails';
 
-function App() {
+function TenantDetailsPage() {
+  const { id } = useParams();
+
+  // Fetch tenant details from backend based on id
+  const tenant = { id: id, name: 'John Doe', email: 'john@example.com', phone: '123-456-7890' };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h2>Tenant Details</h2>
+      <TenantDetails tenant={tenant} />
     </div>
   );
 }
 
-export default App;
+export default TenantDetailsPage;
