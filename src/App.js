@@ -18,8 +18,8 @@ function App() {
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/dashboard" element={<DashboardPage />} />
         <Route path="/property/:id" element={<PropertyPage />} />
-        <Route path="/tenants" exact component={TenantPage} />
-        <Route path="/tenant/:id" component={TenantDetailsPage} />
+        <Route path="/tenants" element={<TenantPage />} />
+        <Route path="/tenant/:id"  element={<TenantDetailsPage />} />
       </Routes>
       <Footer />
     </Router>
