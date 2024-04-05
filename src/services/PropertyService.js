@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+class PropertyService {
+  static async getAllProperties() {
+    // Fetch all properties from backend
+  }
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  static async getPropertyById(id) {
+    // Fetch property details by id from backend
+  }
+
+  static async createProperty(propertyData) {
+    // Create a new property on the backend
+  }
+
+  static async updateProperty(propertyData) {
+    // Update an existing property on the backend
+  }
+
+  static async deleteProperty(id) {
+    // Delete a property from the backend
+  }
 }
 
-export default App;
+export default PropertyService;
